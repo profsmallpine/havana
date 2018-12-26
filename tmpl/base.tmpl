@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8">
-    <title>profsmallpine portfolio</title>
+    <meta charset="utf-8">
+    <title>Cafe Havana</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cafe Havana in Belgrade, MT website">
 
     <!-- Favicon Icon -->
     <link rel="shortcut icon" type="image/x-icon" href="/assets/images/favicon.ico">
@@ -11,8 +13,17 @@
 
     <!-- Load all css -->
     {{ stylesheetTag }}
+
+    <!-- Load all fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,400i,500,600,700%7CMerriweather:300,300i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,400i,500,700%7CFrank+Ruhl+Libre:300,400" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   </head>
   <body>
+    <a id="start"></a>
+
+    {{ template "nav" . }}
+
     {{ template "pageContent" . }}
 
     <script src="https://maps.googleapis.com/maps/api/js?sensor=false&key=AIzaSyDkbq0b7UoXJbNA3Kmbiz2n4qHmBUkArQs" type="text/javascript"></script>
