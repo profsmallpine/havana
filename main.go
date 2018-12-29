@@ -8,6 +8,13 @@ import (
 	"github.com/joho/godotenv"
 )
 
+// TODO: add analytics
+// TODO: fix navigation
+// TODO: fix google maps
+// TODO: update content to present
+// TODO: use typing feature - cafe havana is for.. foodies. people who add to
+// 			 the conversation. folks who have made history. and you!
+
 func main() {
 	// Setup logger.
 	logger := log.New(os.Stdout, "", log.Lshortfile|log.LstdFlags)

@@ -24,7 +24,9 @@
 
     {{ template "nav" . }}
 
-    {{ template "pageContent" . }}
+    <div class="main-container">
+      {{ template "pageContent" . }}
+    </div>
 
     <script src="https://maps.googleapis.com/maps/api/js?sensor=false&key=AIzaSyDkbq0b7UoXJbNA3Kmbiz2n4qHmBUkArQs" type="text/javascript"></script>
     {{ javascriptTag }}
