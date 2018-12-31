@@ -9,9 +9,7 @@ import (
 )
 
 // TODO: add analytics
-// TODO: fix navigation
-// TODO: fix google maps
-// TODO: update content to present
+// TODO: cafe havana font
 // TODO: use typing feature - cafe havana is for.. foodies. people who add to
 // 			 the conversation. folks who have made history. and you!
 
