@@ -3,3 +3,7 @@
 .darken {
   filter: brightness(50%);
 }
+
+.font-rye {
+  font-family: 'Rye', cursive;
+}
