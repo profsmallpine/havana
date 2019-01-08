@@ -1445,7 +1445,7 @@ mr = (function (mr, $, window, document){
                     mapAo.zoomControlOptions = zoomControlPos !== false ? {position: google.maps.ControlPosition[zoomControlPos]} : undefined;
 
                     markerDefaults = {
-                        icon: {url:( typeof mr_variant !== typeof undefined ? '../': '' )+'img/mapmarker.png', scaledSize: new google.maps.Size(50,50)},
+                        icon: {url:( typeof mr_variant !== typeof undefined ? '../': '' )+'/assets/img/mapmarker.png', scaledSize: new google.maps.Size(50,50)},
                         title: 'We Are Here',
                         optimised: false
                     };
