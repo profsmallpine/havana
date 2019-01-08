@@ -17,8 +17,10 @@ func main() {
 	logger := log.New(os.Stdout, "", log.Lshortfile|log.LstdFlags)
 
 	// Load .env file.
-	if err := godotenv.Load(); err != nil {
-		panic("could not load env!")
+	if os.Getenv("ENVIRONMENT") != "production" {
+		if err := godotenv.Load(); err != nil {
+			panic("could not load env!")
+		}
 	}
 
 	// Minify assets.
