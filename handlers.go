@@ -33,6 +33,7 @@ func respond(logger *log.Logger, w http.ResponseWriter, r *http.Request, layout 
 		"./tmpl/partials/_owner_hero.tmpl",
 		"./tmpl/partials/_kyle.tmpl",
 		"./tmpl/partials/_ramon.tmpl",
+		"./tmpl/partials/_catering.tmpl",
 		"./tmpl/partials/_map.tmpl",
 		"./tmpl/partials/_footer.tmpl",
 		layout,
