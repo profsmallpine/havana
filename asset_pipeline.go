@@ -171,8 +171,6 @@ var javascripts = []string{
 	"assets/js/spectragram.min.js",
 	"assets/js/smooth-scroll.min.js",
 	"assets/js/scripts.js",
-	"assets/js/sms-link.min.js",
-	"assets/js/custom.js",
 }
 
 var stylesheets = []string{
