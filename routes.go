@@ -17,6 +17,7 @@ func buildRoutes(h handler) *httprouter.Router {
 	// request.
 	middlewares := []adapter{
 		logRequest(h.Logger),
+		redirectToHTTPS(h.Logger),
 	}
 
 	// Routes setup + middlewares injection.

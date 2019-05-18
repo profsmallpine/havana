@@ -26,3 +26,16 @@ func logRequest(logger *log.Logger) adapter {
 		})
 	}
 }
+
+func redirectToHTTPS(logger *log.Logger) adapter {
+	return func(h http.Handler) http.Handler {
+		return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+			if r.URL.Scheme == "http" {
+				r.URL.Scheme = "https"
+				http.Redirect(w, r, r.URL.String(), http.StatusMovedPermanently)
+				return
+			}
+			h.ServeHTTP(w, r)
+		})
+	}
+}
