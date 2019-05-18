@@ -28,7 +28,7 @@ func logRequest(logger *log.Logger) adapter {
 	}
 }
 
-func redirectToHTTPS(logger *log.Logger) adapter {
+func redirectToHTTPS() adapter {
 	return func(h http.Handler) http.Handler {
 		return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 			if os.Getenv("ENVIRONMENT") != "development" {
