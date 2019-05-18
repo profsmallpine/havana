@@ -3,6 +3,7 @@ package main
 import (
 	"log"
 	"net/http"
+	"os"
 )
 
 // adapter function for use in setting up middlewares.
@@ -30,11 +31,14 @@ func logRequest(logger *log.Logger) adapter {
 func redirectToHTTPS(logger *log.Logger) adapter {
 	return func(h http.Handler) http.Handler {
 		return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-			if r.URL.Scheme == "http" {
-				r.URL.Scheme = "https"
-				http.Redirect(w, r, r.URL.String(), http.StatusMovedPermanently)
-				return
+			if os.Getenv("ENVIRONMENT") != "development" {
+				if r.Header.Get("x-forwarded-proto") != "https" {
+					url := "https://" + r.Host + r.RequestURI
+					http.Redirect(w, r, url, http.StatusPermanentRedirect)
+					return
+				}
 			}
+
 			h.ServeHTTP(w, r)
 		})
 	}
